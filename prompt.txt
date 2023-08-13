@@ -1,0 +1,12 @@
+use python,
+read index.html and parse it with beautifulsoup.
+
+find all div with class="sg-col-4-of-24 sg-col-4-of-12 s-result-item s-asin sg-col-4-of-16 sg-col s-widget-spacing-small sg-col-4-of-20"
+for each div from above list,
+try find img with class="s-image" then link=img.src
+except link="
+try find span with class="a-size-base-plus a-color-base a-text-normal" then title=span.text
+except title="
+try find span with class="a-icon a-icon-star-small a-star-small-4 aok-align-bottom" then rating=span.text
+except rating="
+open data.json and write link,title,rating in json format.
